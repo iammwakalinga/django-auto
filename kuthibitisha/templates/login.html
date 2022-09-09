@@ -1,0 +1,38 @@
+{%extends "base.html"%}
+{% block content %}
+
+
+</head>
+<div class="wrapper">
+    <section class="form signup">
+
+<h3 >Login</h3>
+<form method="post">
+    {% csrf_token %}
+    <div class="details">
+        <div class="fields input">
+          <label>Phone_number:</label>
+        <input type="text" placeholder="phone_number">
+        </div>
+        <div class="fields input">
+            <label>Password:</label>
+        <input type="password" placeholder="password"  >
+        <i class="fas fa-eye"></i>
+        </div>
+    </div>
+    
+
+
+<div class="fields button">
+<button >Login</button>
+</div>
+</form>
+<div class="link"><p>Don't have account?<a href="{% url 'register' %}">Register</a></p></div>
+    </section>
+
+</div>
+
+
+    
+{% endblock content %}
+    

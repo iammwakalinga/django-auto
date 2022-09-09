@@ -1,0 +1,44 @@
+{%extends "base.html"%}
+{% block content %}
+
+
+</head>
+<div class="wrapper">
+    <section class="form signup">
+
+<h3>Register</h3>
+<form   method="post">
+    {% csrf_token %}
+    {% if message %}
+    
+
+    {% endif %}
+    
+    <div class="details">
+        <div class="fields input">
+          <label>Username:</label>
+        <input type="text" placeholder="username" class="form-control">
+        </div>
+        <div class="fields input">
+            <label>Phone_number:</label>
+          <input type="text" placeholder="phone_number">
+        </div>
+
+    
+        
+    </div>
+    
+</div>
+
+<div class="fields button">
+<button >Signup</button>
+</div>
+</form>
+<div class="link"><p>Already have account?<a href="{% url 'login' %}">Login</a></p></div>   
+    </section>
+</div>
+
+
+    
+{% endblock content %}
+    

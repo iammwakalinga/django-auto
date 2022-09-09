@@ -1,0 +1,36 @@
+{%extends "base.html"%}
+{% block content %}
+
+</head>
+<div class="wrapper">
+    <section class="form signup">
+
+<h3>Enter OTP sent to your number</h3>
+{% if message %}
+    
+
+    {% endif %}
+<form  method="post">
+    {% csrf_token %}
+    
+    <div class="details">
+        <div class="fields input">
+          <label>Enter OTP:</label>
+        <input type="text" placeholder="Enter otp">
+        </div>
+    </div>
+    
+
+
+     <div class="fields button">
+     <button>Submit</button>
+   </div>
+</form>
+<div class="link"><p>Don't have account?<a href="{% url 'register' %}">Register</a></p></div>   
+    </section>
+</div>
+
+
+    
+{% endblock content %}
+    
